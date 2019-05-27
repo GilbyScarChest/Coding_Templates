@@ -1,0 +1,7 @@
+Open Bash terminal on the folder containing your Jupyter Notebook.
+
+type this into the console:
+
+
+
+'jupyter notebook --NotebookApp.iopub_data_rate_limit=10000000000'

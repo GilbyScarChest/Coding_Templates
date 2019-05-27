@@ -1,0 +1,80 @@
+<!--
+Horizontal center:
+
+- {text-center} to center {display:inline} elements & column content
+- {mx-auto} for centering horizontally inside flex elements
+- {my-auto} for centering vertically inside parent div
+- {offset-*} or {mx-auto} can be used to center columns (.col-)
+- {justify-content-center} to center columns (col-*) inside row
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <title>Centering</title>
+    </head>
+    <body>
+        
+        
+        <!-- Centering Form -->
+        <div class="container h-100">
+          <div class="row h-100 justify-content-center align-items-center">
+            <form class="col-12">
+              <div class="form-group">
+                <label for="formGroupExampleInput">Example label</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Another label</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+              </div>
+            </form>   
+          </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <!-- Image --> 
+        <div class="container">
+            <h1 class="text-center" >center</h1>
+            <div class="row bg-faded">
+                <div class="col-4 mx-auto text-center">
+                    <img src="//placehold.it/300"> <!-- center this image within the column -->
+                    <p>centered</p>
+                </div>
+            </div>
+            <div class="row bg-faded mt-2">
+                <div class="col-4 mx-auto">
+                    <img class="mx-auto d-block" src="//placehold.it/300"> <!-- center this image within the column -->
+                    <p>not centered</p>
+                </div>
+            </div>
+            <div class="row bg-faded mt-2">
+                <div class="col-4 mx-auto d-flex justify-content-center flex-wrap">
+                    <img class="" src="//placehold.it/300"> <!-- center this image within the column -->
+                    <p>centered</p>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </body>
+</html>
+
+
+
+<!--the height of the container with the item(s) to center should be 100% (or whatever the desired height is relative to the centered item)
+
+Note: When using height:100% (percentage height) on any element, the element takes in the height of it's container. In modern browsers vh units height:100vh; can be used instead of % to get the desired height.-->
