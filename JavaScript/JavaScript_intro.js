@@ -28,6 +28,11 @@ if (x === 1 || y === 10){
 // Combine strings and variables
 console.log(`example1 is ${example1}, and example2 is ${example2}.`)
 
+// Selecting elements
+let square = document.querySelector("p");
+let circle = document.querySelector("#circle");
+let triangle = document.querySelector(".triangle");
+
 
 
 
