@@ -11,17 +11,17 @@ def echo():
     return render_template("index.html", text="Serving up cool text from the Flask server!!")
 
 # create route that renders list to index.html template
-@app.route("/")
-def index():
-    team_list = ["Jumpers", "Dunkers", "Dribblers", "Passers"]
-    return render_template("index.html", list=team_list)
+# @app.route("/")
+# def index():
+#     team_list = ["Jumpers", "Dunkers", "Dribblers", "Passers"]
+#     return render_template("index.html", list=team_list)
 
-# create route that renders dictionary to index.html template
-@app.route("/")
-def index():
-    player_dictionary = {"player_1": "Jessica",
-                         "player_2": "Mark"}
-    return render_template("index.html", dict=player_dictionary)
+# # create route that renders dictionary to index.html template
+# @app.route("/")
+# def index():
+#     player_dictionary = {"player_1": "Jessica",
+#                          "player_2": "Mark"}
+#     return render_template("index.html", dict=player_dictionary)
 
 
 

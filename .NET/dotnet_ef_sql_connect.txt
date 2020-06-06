@@ -1,0 +1,10 @@
+dotnet add [Project] package microsoft.entityframeworkcore
+dotnet add [Project] package microsoft.entityframeworkcore.design
+dotnet add [Project] package microsoft.entityframeworkcore.inmemory
+
+dotnet add [Project] package npgsql.entityframeworkcore.postgresql
+dotnet add [Project] package npgsql.entityframeworkcore.postgresql.design
+
+-------------------------------------------------------------------
+
+dotnet ef dbcontext scaffold -s ../PizzaBox.Client/PizzaBox.Client.csproj --context PizzaBoxDbContext -o PizzaBoxDb "server=127.0.0.1;database=PizzaBox;user id=sa;password=Password12345" Microsoft.EntityFrameworkCore.Sqlserver

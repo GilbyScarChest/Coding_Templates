@@ -1,0 +1,19 @@
+** Prerequisites **
+
+node.js
+
+*******************
+
+npm install @angular/cli  // install the angular command line interface
+
+ng help  // gives list of available commands
+
+ng generate --help 
+
+*******************
+
+ng new [name-of-project]  // creates a new angular project
+
+ng generate  // makes a new component
+
+ng serve  // runs the project (localhost:4200)

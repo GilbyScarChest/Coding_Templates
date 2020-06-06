@@ -1,0 +1,34 @@
+  -- .NET Application Architecture --
+
+mk dir (solution name)  // Make the directory for the sln
+
+dotnet new sln --name _________
+
+
+
+dotnet new mvc --name (sln).Client  // creates an ASP.Net MVC assembly
+
+dotnet new webapi --name (sln).Client // creates a Web API Service
+
+dotnet new console --name (sln).Client // creates a Console Application
+
+
+
+dotnet new classlib --name (sln).Domain // creates Domain assembly
+
+dotnet new classlib --name (sln).Storing // creates Storing assembly
+
+dotnet new xunit --name (sln).Testing // creates Testing assembly
+
+dotnet sln add **/*.csproj // adds all projects/assemblies to the solution
+
+
+  -- Data First --
+dotnet add (sln).Client/(sln).Client.csproj reference (sln).Storing/(sln).Storing.csproj
+dotnet add (sln).Domain/(sln).Domain.csproj reference (sln).Storing/(sln).Storing.csproj
+dotnet add (sln).Testing/(sln).Testing.csproj reference (sln).Storing/(sln).Storing.csproj
+
+ -- Code First --
+dotnet add (sln).Client/(sln).Client.csproj reference (sln).Domain/(sln).Domain.csproj
+dotnet add (sln).Storing/(sln).Storing.csproj reference (sln).Domain/(sln).Domain.csproj
+dotnet add (sln).Testing/(sln).Testing.csproj reference (sln).Domain/(sln).Domain.csproj

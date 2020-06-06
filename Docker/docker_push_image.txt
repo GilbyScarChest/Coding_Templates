@@ -1,0 +1,2 @@
+docker image tag (image-tage):(version) (username)/(repo)
+docker image push (username)/(repo)

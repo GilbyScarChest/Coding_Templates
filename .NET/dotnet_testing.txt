@@ -1,0 +1,17 @@
+  -- .Net Testing --
+
+dotnet test  // runs all methods inside Testing assembly maked with [Fact] attribute.
+
+
+  -- Coverlet -- https://github.com/tonerdo/coverlet
+
+dotnet add package coverlet.collector
+
+
+dotnet test --collect:"XPlat Code Coverage"
+
+
+dotnet add package coverlet.msbuild
+
+
+dotnet test -p:CollectCoverage=true

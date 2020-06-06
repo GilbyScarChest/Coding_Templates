@@ -1,0 +1,15 @@
+  -- Migration to Data Base (Using Code First Approach) --
+
+dotnet ef migrations add --startup-project (sln).Client/(sln).Client.csproj --project (sln).Data/(sln).Data.csproj (migration-name)
+
+-OR-
+
+dotnet ef migrations add -s (sln).Client/(sln).Client.csproj -p (sln).Data/(sln).Data.csproj (migration-name)
+
+
+dotnet ef migrations list  //shows the list of migrations.
+
+
+ -- Update The Database --
+
+dotnet ef database update --context (yourDbContext) -s (sln).Client/(sln).Client.csproj -p (sln).Data/(sln).Data.csproj  // will update your database with current code.

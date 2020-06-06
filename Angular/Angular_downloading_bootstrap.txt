@@ -1,0 +1,48 @@
+** Downloading Bootstrap/jQuery **
+
+npm install --save bootstrap  // downloads latest bootstrap version
+npm install --save jquery  //downloads latest jquery version
+
+
+
+Open the angular.json file of your project and include:
+
+"node_modules/bootstrap/dist/css/bootstrap.css" in the projects->architect->build->styles array,
+"./node_modules/jquery/dist/jquery.js" in the projects->architect->build->scripts array,
+"node_modules/bootstrap/dist/js/bootstrap.js" in the projects->architect->build->scripts array,
+
+Ex:
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1, 
+  "newProjectRoot": "projects",
+  "projects": {
+    "angular-bootstrap-examples": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/angular-bootstrap-examples",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/styles.css"              
+            ],
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
+          },

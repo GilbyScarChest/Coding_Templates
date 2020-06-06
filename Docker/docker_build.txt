@@ -1,0 +1,59 @@
+ -- Docker Build --
+
+Docker is a container engine.
+Containerization: Rather than abstracting the hardware (like with virtualization), abstract the software (OS).
+Containers are single, atomic things that run in their own environment.
+
+Build Process
+docker image build - grabbing the piece of code that needs to become an image
+
+Image - docker image build
+	contains instructions for the data, does not contain data. a set of instructions from a 		configuration file (dockerfile). A snapshot of the running container.
+
+	needs to have a context.
+
+Container - docker container run
+	The environment in which the image will run. The "running instance of the image".
+
+	2 ways to get inside
+		- port forwarding:
+			I need to see inside as a customer
+		- instancing:
+			I need to enter through the service.
+
+Registry - dockerhub
+	An image repository. This is where the images are stored.
+
+*image executes the dockerfile, the dockerfile reads the file/code, and the container is the environment where the image is running the file/code.
+
+
+RUN - executes only inside the environment
+COMMAND - executes outside of the environment when we specify. 
+ENTRYPOINT - executes a call from outside the environment to run inside the environment
+
+---------------------------
+
+docker image build -t (image name) . // Build the docker image
+
+docker container run -dit --rm --name (container name) -p (port in):(port out) (image name)
+
+Ex.
+docker container run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Password12345' -p 1433:1433 --rm -d sqlserver
+
+
+docker container ls // list all active conainers
+
+
+docker container stop (first 3 digits of container to stop) // stops running container
+
+
+docker container prune // clears the cache of all stopped containers
+
+
+
+Oracle VM VirtualBox -- Settings/Network/Advanced/Port_Forwarding
+[Name  | Protocol | Host IP   | Host Port | Guest IP | Guest Port]
+
+[docker| TCP      | 0.0.0.0   | 5000	  |	     | 5000	 ]
+
+ 

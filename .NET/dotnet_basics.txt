@@ -1,0 +1,10 @@
+ -- .Net Basic Commands --
+
+dotnet build  // builds the current solution
+
+dotnet run --project (sln).Client/(sln).Client.csproj  // runs the Client project file
+
+dotnet test  // runs the tests in the solution's (sln).Test assembly
+
+// requires coverlet https://github.com/tonerdo/coverlet
+dotnet test -p:CollectCovereage=true -p:CoverletOutputFormat=opencover  // test with coverage metrics.

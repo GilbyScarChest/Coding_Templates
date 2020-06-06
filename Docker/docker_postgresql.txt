@@ -1,0 +1,20 @@
+  -- Docker Build For PostgreSQL --
+
+docker image pull postgres:alpine
+
+Oracle VM VirtualBox -- Settings/Network/Advanced/Port_Forwarding
+[Name  | Protocol | Host IP   | Host Port | Guest IP | Guest Port]
+
+[sql   | TCP      | 127.0.0.1 | 5432      |          | 5432      ] // open this port
+
+
+
+-- DbContext Class --
+protected override void OnConfiguring(DbContextOptionsBuilder dbContext)
+        {
+		dbContext.UseNpgsql("server=localhost;database=postgres;user id=postgres;password=postgres");
+        }
+
+
+
+docker container run -dit --rm --name postgres -p 5432:5432 postgres:alpine
